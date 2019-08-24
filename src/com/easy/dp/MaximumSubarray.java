@@ -13,9 +13,13 @@ package com.easy.dp;
  *
  * If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
  *
- *  ��⣺
- *
+ *  
+ * 题解:
+ *      采用动态规划，可以得出到数组中i处的值的和为
+ *      截至到i位置的数值的和和0进行比较后加上A[i]，也就是如下公式    
  *      maxSubArray(A, i) = maxSubArray(A, i - 1) > 0 ? maxSubArray(A, i - 1) : 0 + A[i];
+ *      这样即可以得出到i处的和就是拿比较得出的值加上了A[i]的值
+ *      然后再和之前的最大值进行比较遍历即可得出结果
  *
  *      https://leetcode.com/problems/maximum-subarray/discuss/20193/dp-solution-some-thoughts
  */

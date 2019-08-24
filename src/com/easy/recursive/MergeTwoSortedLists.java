@@ -27,7 +27,7 @@ public class MergeTwoSortedLists {
 
 
     /**
-     * �ݹ����
+     * 递归
      * @param l1
      * @param l2
      * @return
@@ -50,7 +50,7 @@ public class MergeTwoSortedLists {
 
 
     /**
-     * �ǵݹ� ѭ���������
+     * 非递归解法
      * @param l1
      * @param l2
      * @return
