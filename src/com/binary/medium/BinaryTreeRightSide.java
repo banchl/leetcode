@@ -1,7 +1,10 @@
-package com.easy.binary;
+package com.binary.medium;
 
-import com.easy.binary.TreeNode;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * LeetCode No53. Maximum Subarray
@@ -50,11 +53,11 @@ public class BinaryTreeRightSide {
             int size = queue.size();
             for(int i = 0; i<size; i++) {
                 TreeNode node = queue.poll();
-                if(list.size<count) {
+                if(list.size()<count) {
                     list.add(node.val);
                 }
                 if(node.right!=null) {
-                    queue.offer(node.roght);
+                    queue.offer(node.right);
                 }
                 if(node.left!=null) {
                     queue.offer(node.left);
@@ -80,7 +83,7 @@ public class BinaryTreeRightSide {
                     queue.offer(node.left);
                 }
                 if(node.right!=null) {
-                    queue.offer(node.roght);
+                    queue.offer(node.right);
                 }
             }
         }

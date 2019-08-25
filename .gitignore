@@ -1,6 +1,7 @@
 ##ignore this file##
 /target/ 
 /build/
+/out/
 .gradle
 .settings
 .idea
