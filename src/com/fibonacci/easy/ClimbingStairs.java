@@ -1,4 +1,4 @@
-package com.easy.fibonacci;
+package com.fibonacci.easy;
 
 /**
  * 70. Climbing Stairs
@@ -24,21 +24,21 @@ package com.easy.fibonacci;
  * 2. 1 step + 2 steps
  * 3. 2 steps + 1 step
  *
- * Ìâ½â:
- *      µ½´ïÌ¨½×NµÄ²½ÊıÓĞÁ½ÖÖ·½·¨£¬Ò»ÖÖÎª´ÓN-1¼¶Ì¨½×¿çÒ»²½£¬Ò»ÖÖÎª´ÓN-2¼¶Ì¨½×¿çÁ½²½
- *      ÓÚÊÇ¿ÉÒÔ½«Æä»®·Ö³ÉÁ½¸öÎÊÌâ¼´£º
- *      1.µ½N-1¼¶Ì¨½×ÓĞ¶àÉÙÖÖ×ß·¨
- *      2.µ½N-2¼¶Ì¨½×ÓĞ¶àÉÙÖÖ×ß·¨
- *      ÓÚÊÇÆäÍ¨Ïî¹«Ê½ºÜÏñì³²¨ÄÇÆõÊıÁĞ¼´£º
+ * é¢˜è§£:
+ *      åˆ°è¾¾å°é˜¶Nçš„æ­¥æ•°æœ‰ä¸¤ç§æ–¹æ³•ï¼Œä¸€ç§ä¸ºä»N-1çº§å°é˜¶è·¨ä¸€æ­¥ï¼Œä¸€ç§ä¸ºä»N-2çº§å°é˜¶è·¨ä¸¤æ­¥
+ *      äºæ˜¯å¯ä»¥å°†å…¶åˆ’åˆ†æˆä¸¤ä¸ªé—®é¢˜å³ï¼š
+ *      1.åˆ°N-1çº§å°é˜¶æœ‰å¤šå°‘ç§èµ°æ³•
+ *      2.åˆ°N-2çº§å°é˜¶æœ‰å¤šå°‘ç§èµ°æ³•
+ *      äºæ˜¯å…¶é€šé¡¹å…¬å¼å¾ˆåƒæ–æ³¢é‚£å¥‘æ•°åˆ—å³ï¼š
  *      F(N)=F(N-1)+F(N-2)
- *      µ«ÊÇÒòÎªÔÚµÚ¶ş²½ÓĞÁ½ÖÖ×ß·¨Òò´Ë£¬ËûµÄN=2Îª2
+ *      ç”±äºåœ¨ç¬¬äºŒæ­¥æ—¶å¯æœ‰2ç§èµ°æ³•ï¼Œè·¨ä¸€æ­¥æˆ–è€…è·¨ä¸¤æ­¥ï¼Œå› æ­¤åœ¨ç¬¬äºŒé¡¹æ—¶å–å€¼ä¸º2
  */
 public class ClimbingStairs {
 
-    public int climbStairs(int n) {
+    public int climbStairs1(int n) {
         if(n == 1) return 1;
         if(n == 2) return 2;
-        return climbStairs(n-1)+climbStairs(n-2);
+        return climbStairs1(n-1)+climbStairs1(n-2);
     }
 
 
@@ -48,12 +48,35 @@ public class ClimbingStairs {
         int i = 1;
         int j = 1;
         int result = 0;
-        for (int k = 0;k < n; k++) {
+        for (int k = 1;k < n; k++) {
             result = i + j;
             j = i;
             i = result;
         }
         return result;
 
+    }
+
+
+    public int climbStairs2(int n) {
+        if(n<=1) return 1;
+        int[] result = new int[n];
+        result[0] = 1;
+        result[1] = 2;
+        for(int i = 2; i <= n - 1; i++) {
+            result[i] = result[i - 1] + result[i - 2];
+        }
+        return result[n-1];
+    }
+
+    /**
+     * å°¾é€’å½’çš„æ–¹å¼
+     * åˆå€¼ä¸º1ï¼Œ1ï¼Œ1ï¼Œm
+     */
+    public int climbStairs(int n, int i, int j, int m) {
+        if(m<=1) return n;
+        n = i + j;
+        m--;
+        return climbStairs(n, n, i, m);
     }
 }

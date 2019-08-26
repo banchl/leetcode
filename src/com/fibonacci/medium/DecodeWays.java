@@ -22,14 +22,14 @@ package com.fibonacci.medium;
  * Output: 3
  * Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
  *
- * ��⣺
- *      ��n���Ŀ����ַ�����ϵ��ڵ�n-1�����ַ�����ϼ��ϵ�n-2���ַ������
- *      Ҳ���� numDecodings(n, i) = numDecodings(n, i -1) + numDecodings(n, i - 2);
- *      �����������ж�������
- *      1.numDecodings(n, i-1)���ִ�����ֵ��1��9֮�䣬����Ϊ0������Ϊ0
- *      2.numDecodings(n, i-2)���ִ�����ֵ��10��26֮�䣬����Ϊ0
- *      ͬʱ���쳲��������еĻ���Ҫ�ж�n=1ʱ�ַ����Ƿ�Ϊ0����Ϊ0��ֵͨ��Ϊ0��
- *      1��0/1��1/2��1/3...ͬʱ�ڼ����м���ʱ��Ҫ�ж��ִ��Ƿ�Ϊ0���Ƿ����26
+ * 题解：
+ *      到n处的可能字符串组合等于到n-1处的字符串组合加上到n-2处字符串组合
+ *      也就是 numDecodings(n, i) = numDecodings(n, i -1) + numDecodings(n, i - 2);
+ *      但是有两个判断条件是
+ *      1.numDecodings(n, i-1)中字串的数值在1到9之间，不能为0，否则为0
+ *      2.numDecodings(n, i-2)中字串的数值在10到26之间，否则为0
+ *      同时类比斐波那契数列的话需要判断n=1时字符串是否为0，若为0则值通项为0即
+ *      1，0/1，1/2，1/3...同时在计算中间项时需要判断字串是否为0和是否大于26
  */
 public class DecodeWays {
 

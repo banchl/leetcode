@@ -1,4 +1,4 @@
-package com.easy.fibonacci;
+package com.fibonacci.easy;
 
 
 /**
@@ -51,6 +51,17 @@ public class FibonacciNumber {
         if(N == 0) return 0;
         if(N == 1) return 1;
         return fibReursive(N-1) +fibReursive(N-2);
+    }
+
+    /**
+     * 尾递归的方式
+     * 初值为1，0，1，m
+     */
+    public int climbStairs(int n, int i, int j, int m) {
+        if(m<=1) return n;
+        n = i + j;
+        m--;
+        return climbStairs(n, n, i, m);
     }
 
 }
