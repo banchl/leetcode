@@ -1,11 +1,9 @@
 package com.binary.easy;
 
 
-import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * {@code LeetCode No617. Merge Two Binary Trees}
@@ -21,7 +19,7 @@ import java.util.Stack;
  *      同时查看题解的时候找到了使用DFS和BFS两种方式遍历的解法
  *
  */
-public class BinaryTreeRightSide {
+public class MergeTwoBinaryTrees {
 
     public class TreeNode {
         int val;
