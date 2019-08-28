@@ -6,3 +6,5 @@
 .settings
 .idea
 *.gradle
+*.project
+.classpath
