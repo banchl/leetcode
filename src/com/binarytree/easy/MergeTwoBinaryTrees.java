@@ -1,4 +1,4 @@
-package com.binary.easy;
+package com.binarytree.easy;
 
 
 import java.util.Deque;

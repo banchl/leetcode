@@ -1,4 +1,4 @@
-package com.binary.easy;
+package com.binarytree.easy;
 
 
 import java.util.ArrayList;
@@ -8,12 +8,12 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
- * {@code LeetCode No101. Symmetric Tree}
+ * {@code LeetCode No100. Same Tree}
  * <p>
  * 
  * 题解:<p>
  * 
- *      判断两个二叉树是否时相等的二叉树<p>
+ *      判断两个二叉树是否是相等的二叉树<p>
  *      方法一：采取递归的方式，每次遍历即比较当前节点一的值是否等于节点二的值，
  *      接着比较当前节点一左子树节点和右子树节点与节点二的左子树节点和右子树节点是否相等
  *      临界条件为节点一二其中一个子树节点为null

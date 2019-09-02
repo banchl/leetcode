@@ -1,4 +1,4 @@
-package com.binary.medium;
+package com.binarytree.medium;
 
 
 import java.util.ArrayList;
