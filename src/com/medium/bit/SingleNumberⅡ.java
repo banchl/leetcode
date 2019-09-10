@@ -1,4 +1,4 @@
-package com.easy.normal;
+package com.medium.bit;
 
 /**
  * {LeetCode No.137. Single Number II}
@@ -8,7 +8,7 @@ package com.easy.normal;
  * 题解：
  *      在给定的数组中找只出现一次的数字,重复的数字会有三个<p>
  */
-public class RomanToInteger {
+public class SingleNumberⅡ {
 
     public int singleNumber(int[] nums) {
         int x1 = 0, x2 = 0, mask = 0;
