@@ -13,7 +13,7 @@ import java.util.Stack;
  * 
  * 
  * 题解：
- *      给定一个排好序的链表，将其重复的值删除掉
+ *      给定一个排好序的链表，将其重复的值删除掉并保留一个
  *      解法一：
  *          采用循环的做法，遍历链表，因为给定的即是有序的，
  *          因此每次遍历比较当前节点和下一个节点的值是否相等即可，
@@ -21,7 +21,7 @@ import java.util.Stack;
  *      解法二：
  *          采用递归的做法，每次递归即是比较当前节点和下一个节点是否相等，临界条件是当前节点或者下一个节点为null
  */
-public class BinaryTreeInorderTraversal {
+public class RemoveDuplicatesFromSortedList {
 
     public class ListNode {
         int val;
