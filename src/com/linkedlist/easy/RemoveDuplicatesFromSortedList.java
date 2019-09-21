@@ -1,4 +1,4 @@
-package com.linkedlist.medium;
+package com.linkedlist.easy;
 
 
 import java.util.ArrayDeque;
