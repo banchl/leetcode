@@ -1,15 +1,9 @@
 package com.linkedlist.easy;
 
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
 
 /**
- * LeetCode No83. Remove Duplicates from Sorted List
+ * LeetCode No206. Reverse Linked List
  * 
  * 
  * 题解：
