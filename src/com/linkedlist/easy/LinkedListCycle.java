@@ -12,7 +12,7 @@ package com.linkedlist.easy;
  * 
  * 
  */
-public class ReverseLinkedList {
+public class LinkedListCycle {
 
     public class ListNode {
         int val;

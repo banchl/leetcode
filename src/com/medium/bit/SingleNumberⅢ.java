@@ -13,7 +13,7 @@ package com.medium.bit;
  *      在第二次遍历过程中，将所有数组划分成两组，一组使用上面设置过1的数字，另一组未设置，
  *      这样两个不同的数字即可最终在两个不同的分组中找出
  */
-public class RomanToInteger {
+public class SingleNumberⅢ {
 
     public int[] singleNumber(int[] nums) {
         // Pass 1 : 
